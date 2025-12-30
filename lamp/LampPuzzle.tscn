@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkwiwedpcd51i"]
+
+[ext_resource type="Script" uid="uid://1b8sii4bgbie" path="res://lamp/LampPuzzle.gd" id="1_1enq0"]
+[ext_resource type="PackedScene" uid="uid://cl5imxouq4pkl" path="res://lamp/Lamp.tscn" id="2_7rpwx"]
+
+[node name="LampPuzzle" type="Node3D"]
+script = ExtResource("1_1enq0")
+lamp_nodes = Array[NodePath]([NodePath("Lamp"), NodePath("Lamp2"), NodePath("Lamp3"), NodePath("Lamp4"), NodePath("Lamp5")])
+
+[node name="Lamp" parent="." instance=ExtResource("2_7rpwx")]
+
+[node name="Lamp2" parent="." instance=ExtResource("2_7rpwx")]
+lamp_id = 1
+
+[node name="Lamp3" parent="." instance=ExtResource("2_7rpwx")]
+lamp_id = 2
+mesh_path = NodePath("../Lamp/Mesh")
+light_path = NodePath("../Lamp/Light3D")
+area_path = NodePath("../Lamp/Area3D")
+
+[node name="Lamp4" parent="." instance=ExtResource("2_7rpwx")]
+lamp_id = 3
+mesh_path = NodePath("../Lamp/Mesh")
+light_path = NodePath("../Lamp/Light3D")
+area_path = NodePath("../Lamp/Area3D")
+
+[node name="Lamp5" parent="." instance=ExtResource("2_7rpwx")]
+lamp_id = 4
+mesh_path = NodePath("../Lamp/Mesh")
+light_path = NodePath("../Lamp/Light3D")
+area_path = NodePath("../Lamp/Area3D")

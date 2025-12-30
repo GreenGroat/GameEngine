@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bf6ss2e4qx2fs"
+path="res://.godot/imported/gold_cruise.obj-18101135c6d6f1f9620788ee87d0a5d1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/gold_cruise.obj-18101135c6d6f1f9620788ee87d0a5d1.mesh"]
+
+source_file="res://Materials/58-gold_cruise/gold_cruise.obj"
+dest_files=["res://.godot/imported/gold_cruise.obj-18101135c6d6f1f9620788ee87d0a5d1.mesh", "res://.godot/imported/gold_cruise.obj-18101135c6d6f1f9620788ee87d0a5d1.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

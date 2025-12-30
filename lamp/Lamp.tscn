@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl5imxouq4pkl"]
+
+[ext_resource type="Script" uid="uid://dkho08hx50xkg" path="res://lamp/lamp.gd" id="1_jravn"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jravn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a38sg"]
+size = Vector3(1, 2.041748, 1)
+
+[node name="Lamp" type="Node3D"]
+script = ExtResource("1_jravn")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_jravn")
+
+[node name="Light3D" type="OmniLight3D" parent="."]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01184082, 0)
+shape = SubResource("BoxShape3D_a38sg")
