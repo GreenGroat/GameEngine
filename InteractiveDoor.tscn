@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://brd8ksvcdysrr"]
+
+[ext_resource type="Texture2D" uid="uid://dicim2lxa6jt1" path="res://templates/broken_brick_wall_4k.blend/textures/broken_brick_wall_diff_4k.jpg" id="1_koded"]
+[ext_resource type="Script" uid="uid://c5flot6t1a200" path="res://Scripts/InteractiveDoor.gd" id="2_yvpjl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_clk1e"]
+size = Vector3(1, 2.5, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0tmra"]
+albedo_texture = ExtResource("1_koded")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qqmfs"]
+size = Vector3(1, 2.5, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uopka"]
+size = Vector3(1.0733032, 2, 2)
+
+[node name="InteractiveDoor" type="StaticBody3D"]
+script = ExtResource("2_yvpjl")
+locked = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_clk1e")
+surface_material_override/0 = SubResource("StandardMaterial3D_0tmra")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_qqmfs")
+
+[node name="DetectionArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea"]
+shape = SubResource("BoxShape3D_uopka")

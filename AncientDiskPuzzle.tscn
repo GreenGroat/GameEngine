@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://bio717cfk4qyg"]
+
+[ext_resource type="Script" uid="uid://cr0xj0pfeqvpt" path="res://Scripts/disk.gd" id="1_4507t"]
+[ext_resource type="Script" uid="uid://btqlly4g8mu6u" path="res://Scripts/puzzle_manager.gd" id="1_jj637"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_esw15"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jj637"]
+
+[node name="AncientDiskPuzzle" type="Node3D"]
+
+[node name="PuzzleManager" type="Node" parent="."]
+script = ExtResource("1_jj637")
+
+[node name="Disks" type="Node3D" parent="."]
+
+[node name="Disk1" type="StaticBody3D" parent="Disks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8828487, 0, 0)
+script = ExtResource("1_4507t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Disks/Disk1"]
+mesh = SubResource("CylinderMesh_esw15")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Disks/Disk1"]
+shape = SubResource("CylinderShape3D_jj637")
+
+[node name="Disk2" type="StaticBody3D" parent="Disks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3903035, 0, 0)
+script = ExtResource("1_4507t")
+disk_id = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Disks/Disk2"]
+mesh = SubResource("CylinderMesh_esw15")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Disks/Disk2"]
+shape = SubResource("CylinderShape3D_jj637")
+
+[node name="Disk3" type="StaticBody3D" parent="Disks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.050351024, 0, 0)
+script = ExtResource("1_4507t")
+disk_id = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Disks/Disk3"]
+mesh = SubResource("CylinderMesh_esw15")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Disks/Disk3"]
+shape = SubResource("CylinderShape3D_jj637")
+
+[node name="Disk4" type="StaticBody3D" parent="Disks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.227171, 0, 0)
+script = ExtResource("1_4507t")
+disk_id = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Disks/Disk4"]
+mesh = SubResource("CylinderMesh_esw15")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Disks/Disk4"]
+shape = SubResource("CylinderShape3D_jj637")
